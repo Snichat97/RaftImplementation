@@ -9,7 +9,7 @@ public class LeaderAnnouncementListner{
         System.out.println(this.partition.partitionNumber + " is being requested vote by "+partitionIncoming);
         if(term > this.partition.currentTerm && this.partition.termLeaderElected==false){
             System.out.println(this.partition.partitionNumber + " partition term "+this.partition.currentTerm+" leader term "+term);
-            this.partition.currentTerm = term;
+            this.partition.currentTerm = term+1;
             this.partition.termLeaderElected = true;
             return true;
         }

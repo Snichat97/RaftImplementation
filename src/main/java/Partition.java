@@ -10,12 +10,14 @@ public class Partition {
     LeaderElection le;
     StopTimer timer;
     boolean termLeaderElected = false;
+    PartitionCluster partitionCluster;
 
 
-    public Partition(int partitonNumber) {
+    public Partition(int partitonNumber, PartitionCluster partitionCluster) {
         this.partitionNumber=partitonNumber;
         this.lal= new LeaderAnnouncementListner(partitionNumber,this);
         this.le= new LeaderElection(partitionNumber,this);
+        this.partitionCluster = partitionCluster;
         this.timer= new StopTimer(this);
     }
 

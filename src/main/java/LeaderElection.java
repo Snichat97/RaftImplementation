@@ -21,6 +21,7 @@ public class LeaderElection{
         });
         if(votes>=majorityThreshold){
             System.out.println(this.partition.partitionNumber+ " has been elected as leader.");
+            this.partition.partitionCluster.setLeader(this.partition);
             this.partition.currentTerm+=1;
         }
     }
