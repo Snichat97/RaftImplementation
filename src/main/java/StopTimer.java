@@ -20,7 +20,7 @@ public class  StopTimer
         this.partition=partition;
         obj=this;
     }
-    public void timing() throws InterruptedException
+    public void induceSleepTime() throws InterruptedException
     {
         int rand = (int) (Math.random() * 10000) + 1000;
         System.out.println(rand);

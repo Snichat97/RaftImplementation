@@ -23,7 +23,7 @@ public class Partition {
 
     public void setReplicaServers(ArrayList replicaServers) throws InterruptedException{
         this.replicaServers=replicaServers;
-        this.timer.timing();
+        this.timer.induceSleepTime();
     }
 
 
